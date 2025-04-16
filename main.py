@@ -24,11 +24,7 @@ parser.add_argument("-l", "--lang", "--language", choices=genshin.LANGS, default
 def format_date(date: "datetime"):
     tz = pytz.timezone("Asia/Jakarta")
     now = date.now(tz=tz)
-    fmt = f"{now.strftime('%b')} \
-            {now.strftime('%d')}, \
-            {now.strftime('%Y')} \
-            {now.strftime('%H:%M %z')}"
-    return fmt
+    return f"{now.strftime('%b')} \\n    #            {now.strftime('%d')}, \\n    #            {now.strftime('%Y')} \\n    #            {now.strftime('%H:%M %z')}"
 
 
 async def main():
